@@ -88,7 +88,7 @@ def plot_stock_data(data, gap_events, last_n_gaps=None, exclude_holidays=True, s
         # Start invalidation check from the same candle
         end_date = find_invalidation_point(data, index, level, is_gap_up)
         color = "green" if is_gap_up else "red"
-        name = f"Gap Up {data['date'].iloc[index]}" if is_gap_up else f"Gap Down {data['date'].iloc[index]}"
+        name = f"Up {data['date'].iloc[index]}" if is_gap_up else f"Down {data['date'].iloc[index]}"
 
         fig.add_trace(go.Scatter(
             x=[data['date'].iloc[index], end_date],
