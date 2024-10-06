@@ -14,7 +14,7 @@ st.set_page_config(
 def main():
     st.title("Gap Stock Analysis")
 
-    symbol = st.text_input("Enter stock ticker symbol:", value='AAPL')
+    symbol = st.text_input("Enter stock ticker symbol:", value='SPY')
     last_n_gaps = st.text_input("Set how many gaps to display (None for all gaps):", value=None)
 
     if st.button("Fetch Data"):
@@ -24,7 +24,7 @@ def main():
         gap_events = detect_gap_days(data)
 
         # Plot the data with invalidation points
-        fig = plot_stock_data(data, gap_events, symbol=symbol)
+        fig = plot_stock_data(data, gap_events, last_n_gaps=last_n_gaps, symbol=symbol)
 
         st.plotly_chart(fig, use_container_width=True)  # Use full container width
 
