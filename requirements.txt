@@ -1,2 +1,6 @@
-streamlit
+holidays
+numpy
 pandas
+plotly
+streamlit
+yahooquery
