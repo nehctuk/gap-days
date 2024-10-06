@@ -4,7 +4,7 @@ from gap_logic import get_stock_data, detect_gap_days, plot_stock_data
 
 # Set Streamlit page configuration with a white background
 st.set_page_config(
-    page_title="Gap Stock Analysis",
+    page_title="Stock Analysis - True Gaps",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -12,7 +12,7 @@ st.set_page_config(
 
 # Streamlit app
 def main():
-    st.title("Gap Stock Analysis")
+    st.title("Stock Analysis - True Gaps")
 
     symbol = st.text_input("Enter stock ticker symbol:", value='SPY')
     last_n_gaps = st.number_input("Set how many gaps to display (None for all gaps):", min_value=1, value=None, step=1)

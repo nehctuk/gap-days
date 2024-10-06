@@ -126,7 +126,7 @@ def plot_stock_data(data, gap_events, last_n_gaps=None, exclude_holidays=True, s
         yaxis=dict(
             side="right"  # Display price on the right side
         ),
-        title=f"Stock Price and Gap Days with Invalidation for {symbol}",
+        title=f"Stock Price and True Gap Days with Invalidation for {symbol}",
         xaxis_title="Date",
         yaxis_title="Price",
         plot_bgcolor='white',  # White plot background
