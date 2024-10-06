@@ -128,7 +128,11 @@ def plot_stock_data(data, gap_events, last_n_gaps=None, exclude_holidays=True, s
         ),
         title=f"Stock Price and Gap Days with Invalidation for {symbol}",
         xaxis_title="Date",
-        yaxis_title="Price"
+        yaxis_title="Price",
+        plot_bgcolor='white',  # White plot background
+        paper_bgcolor='white',  # White paper (chart area) background
+        width=1200,  # Set width to make the plot larger
+        height=700,   # Set height to make the plot larger
     )
 
     # Show the plot
