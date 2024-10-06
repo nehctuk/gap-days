@@ -133,6 +133,7 @@ def plot_stock_data(data, gap_events, last_n_gaps=None, exclude_holidays=True, s
         paper_bgcolor='white',  # White paper (chart area) background
         width=1200,  # Set width to make the plot larger
         height=700,   # Set height to make the plot larger
+        showlegend=False,  # Disable the legend
     )
 
     # Show the plot
