@@ -15,7 +15,7 @@ def main():
     st.title("Gap Stock Analysis")
 
     symbol = st.text_input("Enter stock ticker symbol:", value='SPY')
-    last_n_gaps = st.text_input("Set how many gaps to display (None for all gaps):", value=None)
+    last_n_gaps = int(st.text_input("Set how many gaps to display (None for all gaps):", value=None))
 
     if st.button("Fetch Data"):
         data = get_stock_data(symbol)
